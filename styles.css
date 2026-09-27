@@ -96,6 +96,18 @@ textarea {
   font-family: "SFMono-Regular", Consolas, monospace;
 }
 
+.profile-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.profile-toolbar {
+  margin-top: 0;
+  margin-bottom: 18px;
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
