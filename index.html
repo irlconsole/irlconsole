@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stream Console QR Config Generator</title>
+    <title>IRL Console QR Config Generator</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <div class="page">
-      <h1>Stream Console QR config generator</h1>
+      <h1>IRL Console QR config generator</h1>
       <p class="subtitle">
-        Build the exact JSON payload used by the Stream Console app and generate a QR code from your desktop.
+        Build the exact JSON payload used by the IRL Console app and generate a QR code from your desktop.
       </p>
 
       <div class="grid">
@@ -33,17 +33,11 @@
 
           <div class="toolbar profile-toolbar">
             <button class="primary" id="saveProfileBtn" type="button">Save profile</button>
-            <button class="secondary" id="loadProfileBtn" type="button">Load profile</button>
             <button class="secondary" id="deleteProfileBtn" type="button">Delete profile</button>
             <button class="secondary" id="newProfileBtn" type="button">New</button>
           </div>
 
           <div class="field-grid">
-            <div class="field">
-              <label for="username">Twitch username</label>
-              <input id="username" type="text" value="" placeholder="yourname" />
-            </div>
-
             <div class="field">
               <label for="panelCount">Panel count</label>
               <select id="panelCount">
@@ -63,12 +57,12 @@
             </div>
 
             <div class="field full">
-              <label for="customPanel1">Custom panel 1 URL</label>
+              <label for="customPanel1">Custom panel 1 URL (optional)</label>
               <input id="customPanel1" type="url" value="" placeholder="https://..." />
             </div>
 
             <div class="field full">
-              <label for="customPanel2">Custom panel 2 URL</label>
+              <label for="customPanel2">Custom panel 2 URL (optional)</label>
               <input id="customPanel2" type="url" value="" placeholder="https://..." />
             </div>
           </div>
@@ -79,9 +73,7 @@
           </div>
 
           <div class="toolbar">
-            <button class="primary" id="generateBtn" type="button">Generate QR</button>
-            <button class="secondary" id="fillExampleBtn" type="button">Use example</button>
-            <button class="secondary" id="copyBtn" type="button">Copy JSON</button>
+            <span></span>
           </div>
         </section>
 
@@ -95,7 +87,10 @@
       </div>
 
       <section class="card" style="margin-top: 24px;">
-        <h2>JSON payload</h2>
+        <div class="section-header-row">
+          <h2>JSON payload</h2>
+          <button class="secondary" id="copyBtn" type="button">Copy JSON</button>
+        </div>
         <textarea id="jsonOutput" spellcheck="false"></textarea>
       </section>
     </div>

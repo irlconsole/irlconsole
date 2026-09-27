@@ -108,6 +108,18 @@ textarea {
   margin-bottom: 18px;
 }
 
+.section-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.section-header-row h2 {
+  margin: 0;
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
@@ -155,6 +167,10 @@ button:hover {
   grid-template-columns: 72px 1fr;
   align-items: center;
   gap: 10px;
+}
+
+.panel-row.hidden {
+  display: none;
 }
 
 .panel-row select {
